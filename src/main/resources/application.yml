@@ -8,5 +8,3 @@ eureka:
     region: default
   server:
     waitTimeInMsWhenSyncEmpty: 5
-  serviceUrl:
-    defaultZone: http://localhost:8761
