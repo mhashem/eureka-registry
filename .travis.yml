@@ -1,5 +1,11 @@
-language: java
-
 sudo: true
 
-script: mvn clean verify
+env:
+- MAVEN_VERSION=3.3.9
+
+language: java
+jdk:
+- oraclejdk8
+
+script:
+- mvn clean verify
