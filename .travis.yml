@@ -12,4 +12,4 @@ script:
 - mvn clean verify
 
 before_script:
-  - chmod a+x ./mvnw
+  - chmod +x mvnw
