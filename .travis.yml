@@ -11,5 +11,5 @@ jdk:
 script:
 - mvn clean verify
 
-before_script:
+before_install:
   - chmod +x mvnw
