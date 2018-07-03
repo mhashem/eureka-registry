@@ -17,8 +17,9 @@ script:
 
 
 before_install:
-  - ./.travis/main.sh
+  - chmod +x .travis/main.sh
   - chmod +x mvnw
+  - ./.travis/main.sh
 
 after_success:
   - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
