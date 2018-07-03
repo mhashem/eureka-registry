@@ -1,0 +1,31 @@
+sudo: required
+
+env:
+  - MAVEN_VERSION=3.3.9
+
+services:
+  - docker
+
+language: java
+dist: trusty
+jdk:
+  - oraclejdk8
+
+script:
+  - mvn clean verify
+  - mvn install dockerfile:build;
+
+
+before_install:
+  - ./.travis/main.sh
+  - chmod +x mvnw
+
+after_success:
+  - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
+      docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD;
+      docker build -t $DOCKER_IMAGE .;
+      docker push $DOCKER_IMAGE;
+    fi
+
+notifications:
+  email: true
