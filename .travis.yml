@@ -13,8 +13,8 @@ jdk:
 
 script:
   - mvn clean verify
+  - mvn sonar:sonar -Dsonar.organization=$SONAR_ORGANIZATION -Dsonar.host.url=$SONAR_HOST -Dsonar.login=$SONAR_LOGIN
   - mvn install dockerfile:build;
-
 
 before_install:
   - chmod +x .travis/main.sh
@@ -30,7 +30,5 @@ after_success:
 
 notifications:
   email:
-      recipients:
-        - $NOTIFICATION_EMAIL
       on_success: always # default: change
       on_failure: always # default: always

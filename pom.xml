@@ -24,12 +24,19 @@
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
 		<docker.image.prefix>springio</docker.image.prefix>
+		<sonarqube.version>3.2</sonarqube.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.sonarsource.scanner.maven</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
+			<version>${sonarqube.version}</version>
 		</dependency>
 
 		<dependency>
