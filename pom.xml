@@ -23,7 +23,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
-		<docker.image.prefix>springio</docker.image.prefix>
+		<docker.image.prefix>mhachem</docker.image.prefix>
 		<sonarqube.version>3.2</sonarqube.version>
 	</properties>
 
