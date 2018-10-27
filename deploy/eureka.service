@@ -1,0 +1,19 @@
+[Unit]
+Description=Eureka Service Discovery
+
+[Service]
+User=root
+
+WorkingDirectory=/home/deployments/eureka-registry
+
+
+ExecStart=/bin/bash /home/deployments/eureka-registry/eureka-registry-script
+
+SuccessExitStatus=143
+TimeoutStopSec=10
+Restart=on-failure
+RestartSec=5
+
+
+[Install]
+WantedBy=multi-user.target
