@@ -2,7 +2,7 @@
 Description=Eureka Service Discovery
 
 [Service]
-User=mhachem
+User=root
 WorkingDirectory=/home/deployments/eureka-registry
 ExecStart=/bin/bash /home/deployments/eureka-registry/start.sh
 
